@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    // 1 - What types are legal for subscripts?
+    // Answer 1: Array subscript type of Javascript is integer,
+    //           and index syntax is brackets.
+
+    var friends = ['Dilay', 'Arda', 'Ozgur', 'Eylul'];
+    console.log(friends[0]);
+    console.log(friends[1]);
+    console.log(friends[2]);
+    console.log(friends[3]);
+
+    // 2 - Are subscripting expressions in element references range checked?
+    // Answer 2: Javascript is checking index range in arrays. However it does not 
+    //           print an error message. It does not support negative index. 
+    //           Also, if we try to print the index that is not exist, 
+    //           we will see undefined.
+
+    console.log(friends[-1]); //---> undefined
+    console.log(friends[10]); //---> undefined
+    console.log(friends.length);
+
+
+    // 3 - When are subscript ranges bound?
+    // 4 - When does allocation take place?
+    // Answer 3 - 4: Javascript supports heap-dynamic arrays. So that, binding 
+    //               array subscript and allocating storage is dynamic and
+    //               done at run time, they can change during execution time. 
+
+
+    // 5 - Are ragged or rectangular multidimensional arrays allowed, or both?
+    // Answer 5: Both. It supports array of array.
+    var arr1 = [[5, 10, 15], 
+                [20, 25, 30], 
+                [35, 40, 45]]
+
+    var arr2 = [['A', 'B', 'C'], 
+                ['D', 'E'], 
+                ['F']]
+
+    console.log(arr1);
+    console.log(arr2);
+
+
+    // 6 - Can array objects be initialized?
+    // Answer 6: Yes.
+    var emotes = ["Kappa", "KEKW", "OmegaLUL", "PogChamp"];
+    console.log(emotes);
+
+    // 7 - Are any kind of slices supported?
+    // Answer 7: Yes.
+    var emotes_vol2 = ["FailFish", "CoolStoryBob", "NotLikeThis", "SeemsGood"];
+    console.log(emotes_vol2.slice(1,3));
+    console.log(emotes_vol2.slice(2,4));
+
+
+    // 8 - Which operators are provided?
+    // Answer 8: [] and []=
+    emotes_vol2[0] = "Keepo";
+    var firstData = emotes_vol2[0];
+</script>     
+</body>
+</html>
