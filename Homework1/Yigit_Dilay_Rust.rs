@@ -51,3 +51,4 @@ fn main() {
     // 8 - Which operators are provided?
     // Answer 8: [] and []= operators.
     let nums1: [i32; 5] = [1, 2, 3, 4, 5];
+}
