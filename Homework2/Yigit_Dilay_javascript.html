@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+// Question 1: How are the boolean values represented?
+// Answer 1: true and false.
+var obj = true;
+console.log(true);
+var x = 1;
+var y = 2;
+if (x != y) 
+    console.log("It is false!");
+
+
+// Question 2: What operators are short-circuited?
+// Answer 2: &&, || operators are exist in Javascript. 
+var x = 0;
+var y = 'false';
+if (x && y) 
+    console.log("checked the second condition!");
+console.log("did not check the second condition!");
+
+var x = 1;
+var y = 'false';
+if (x && y) 
+    console.log("checked the second condition!");
+console.log("did not check the second condition!");
+
+
+// Question 5: What are the potential problems about short-circuit evaluation?
+// Answer 5: In some cases, second condition has to be executed but code will not
+//           consider this function call.
+
+function check() {
+    console.log("This function has to be executed!");
+    return true;
+}
+console.log(1 || check());
+</script>     
+</body>
+</html>
